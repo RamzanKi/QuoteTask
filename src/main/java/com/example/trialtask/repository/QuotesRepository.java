@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface QuotesRepository extends JpaRepository<Quote, Long> {
     public List<Quote> findTop10ByOrderByRatingDesc();
+    public List<Quote> findTop10ByOrderByRatingAsc();
 }

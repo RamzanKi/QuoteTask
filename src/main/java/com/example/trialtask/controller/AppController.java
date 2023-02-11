@@ -55,10 +55,17 @@ public class AppController {
     public List<Quote> showAllQuotes() {
         return quoteService.getAllQuotes();
     }
+
     @GetMapping("/top10quotes")
     public List<Quote> findTop10ByOrderByRatingDesc() {
         return quoteService.findTop10ByOrderByRatingDesc();
     }
+
+    @GetMapping("/flop10quotes")
+    public List<Quote> findTop10ByOrderByRatingAsc() {
+        return quoteService.findTop10ByOrderByRatingAsc();
+    }
+
     @DeleteMapping("/quotes/{id}")
     public String deleteQuote(@PathVariable int id) {
         quoteService.deleteQuote(id);

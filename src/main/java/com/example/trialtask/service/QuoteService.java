@@ -14,5 +14,6 @@ public interface QuoteService {
     public long count();
     public Quote createQuote(String message, User user);
     public List<Quote> findTop10ByOrderByRatingDesc();
+    public List<Quote> findTop10ByOrderByRatingAsc();
 
 }

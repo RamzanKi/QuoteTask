@@ -59,4 +59,9 @@ public class QuoteServiceImpl implements QuoteService {
         return quotesRepository.findTop10ByOrderByRatingDesc();
     }
 
+    @Override
+    public List<Quote> findTop10ByOrderByRatingAsc() {
+        return quotesRepository.findTop10ByOrderByRatingAsc();
+    }
+
 }
