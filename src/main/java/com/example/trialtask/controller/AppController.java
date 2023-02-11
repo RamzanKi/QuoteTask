@@ -22,11 +22,6 @@ public class AppController {
 
     private final static Random RANDOMIZER = new Random();
 
-//    @GetMapping("/index")
-//    public String viewHomePage() {
-//        return "index";
-//    }
-
     @GetMapping("/users")
     public List<User> showAllUsers() {
         List<User> listUsers = userService.getAllUsers();
@@ -38,12 +33,6 @@ public class AppController {
         User newUser = userService.createUser(user.getEmail(), user.getPassword(), user.getName());
         return newUser;
     }
-
-//    @PostMapping("/user")
-//    public User addNewUser(@RequestBody User user) {
-//        userService.saveUser(user);
-//        return user;
-//    }
 
     @PostMapping("/quotes")
     public Quote createQuote(@RequestBody Quote quote) {
@@ -98,21 +87,5 @@ public class AppController {
     private long nextLong(long lowerRange, long upperRange) {
         return (long) (RANDOMIZER.nextDouble() * (upperRange - lowerRange)) + lowerRange;
     }
-
-
-
-
-//    @GetMapping("/register")
-//    public String showRegistrationForm(Model model) {
-//        model.addAttribute("user", new User());
-//
-//        return "signup_form";
-//    }
-
-//    @PostMapping("/process_register")
-//    public String processRegister(User user) {
-//        userService.saveUser(user);
-//        return "register_success";
-//    }
 
 }
