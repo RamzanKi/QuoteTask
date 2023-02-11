@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  springboot-container:
+    image: spring-boot-task-docker-compose:1
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    volumes:
+      - /data/springboot-container
+    ports:
+      - "8080:8080"
