@@ -75,15 +75,6 @@ public class User {
         this.createDate = createDate;
     }
 
-//    public Set<Quote> getQuotes() {
-//        return quotes;
-//    }
-//
-//    public void setQuotes(Set<Quote> quotes) {
-//        this.quotes = quotes;
-//    }
-
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
